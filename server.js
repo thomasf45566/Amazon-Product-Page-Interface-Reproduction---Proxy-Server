@@ -9,7 +9,7 @@ app.use(bodyParser.text({ type: 'text/html' }));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
-app.use('/', express.static(path.join(__dirname, '../newClient')));
+app.use('/', express.static(path.join(__dirname, './')));
 
 
 app.get('/bundle/:port', function(req, res){ 
