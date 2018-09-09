@@ -24,37 +24,30 @@ app.use('/api/description', function(req, res){
   console.log(req.originalUrl);
   request(`http://localhost:3000${req.originalUrl}`, function (error, response, body) { 
     if (!error && response.statusCode === 200) { 
-      //console.log(body);
       res.status(200).send(body); 
     }
    });
 });
 
 app.use('/image', function(req, res){ 
-  // console.log(req.originalUrl);
   request(`http://localhost:4000${req.originalUrl}`, function (error, response, body) { 
     if (!error && response.statusCode === 200) { 
-      // console.log(body);
       res.status(200).send(body); 
     }
    });
 });
 
 app.use('/api/customer-reviews', function(req, res){ 
-  // console.log(req.originalUrl);
   request(`http://localhost:5000${req.originalUrl}`, function (error, response, body) { 
     if (!error && response.statusCode === 200) { 
-      // console.log(body);
       res.status(200).send(body); 
     }
    });
 });
 
 app.use('/api/qAndA', function(req, res){ 
-  // console.log(req.originalUrl);
   request(`http://localhost:6000${req.originalUrl}`, function (error, response, body) { 
     if (!error && response.statusCode === 200) { 
-      // console.log(body);
       res.status(200).send(body); 
     }
    });
